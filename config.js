@@ -9,7 +9,7 @@ const DATABASE_URL =
   process.env.DATABASE_URL === undefined ? databasePath : process.env.DATABASE_URL
 module.exports = {
   VERSION: require('./package.json').version,
-  SESSION_ID: (process.env.SESSION_ID || '').trim(),
+  SESSION_ID: (process.env.SESSION_ID || 'levanter_15f490ba5327934a779735c063f7a80785').trim(),
   DATABASE:
     DATABASE_URL === databasePath
       ? new Sequelize({
@@ -74,7 +74,7 @@ module.exports = {
   WARN_KICK_MESSAGE: process.env.WARN_KICK_MESSAGE || '&mention kicked',
   TRUECALLER: process.env.TRUECALLER,
   DELETE_TYPE: (process.env.DELETE_TYPE || '').trim(),
-  LIST_TYPE: (process.env.LIST_TYPE || 'text').trim(),
+  LIST_TYPE: (process.env.LIST_TYPE || 'https://telegra.ph/file/d8f7c18771d634b714976.jpg').trim(),
   BING_COOKIE: (process.env.BING_COOKIE || '').trim(),
   GEMINI_API_KEY: (process.env.GEMINI_API_KEY || '').trim(),
   ADMINS: process.env.GROUP_ADMINS || '',
